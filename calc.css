@@ -1,0 +1,290 @@
+/* CSS Document */
+
+/* ==========================================================================
+   General Styles
+   ========================================================================== */
+body 
+{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+#topThing 
+{
+	height:90px;
+	font-size: 22px;
+}
+
+body input[type="text"] {
+	border: 2px solid #702626;
+	border-radius:5px;
+	height:18px;
+}
+
+/* Banner */
+#banner 
+{
+	padding-bottom:5px;
+	text-align:center;
+	margin:auto;
+	border: none;
+}
+
+#banner a img 
+{
+	border: none;
+}
+
+/* Footers */
+
+#footer 
+{
+	display: block;
+   	padding: 5px; margin: 10px;
+   	color: #AAA; background: black;
+   	font-size: 12px;
+}
+
+#footer a 
+{
+	text-decoration:none;
+	color: #9E3636;
+}
+
+#info {	
+	display:inline-block;
+   	padding: 5px 25px 5px 25px; 
+	margin: 2px;
+   	color: #AAA; background: black;
+   	font: 16px;
+	border: 1px solid #702626;
+}
+
+#info2 
+{
+	display:inline-block;
+   	padding: 10px 25px 10px 25px;
+	margin-top:15px;
+	margin-bottom:15px;
+	width:auto;
+	color: #AAA; background: black;
+   	font: 16px; text-align: center;
+	border: 1px solid #702626;
+}
+
+#info a 
+{
+	text-decoration:none;
+	color: #9E3636;
+}
+
+#info a:hover 
+{
+	color: white;
+}
+
+#info2 a 
+{
+	text-decoration:none;
+	color: #9E3636;
+}
+
+#info2 a:hover 
+{
+	color: white;
+}
+
+h3
+{
+	color:white;
+	text-align:left;
+	margin:0px 0px 10px 5px;
+}
+
+/* ==========================================================================
+   Main Content Styles
+   ========================================================================== */
+   
+#items 
+{
+	display:inline-block;
+	border-radius: 6px;
+	background: url(images/wild_oliva.png) left top fixed;
+	padding: 5px 20px 10px 20px;
+	margin-bottom: 20px;
+
+	opacity:0.9;
+	width:1000px;
+	border-radius:10px;
+	border: 1px solid #702626;
+}
+
+#items li
+{
+	list-style:none;
+	display:inline-block;
+	margin:2px;
+}
+
+#button img
+{
+	height:55px;
+	width: auto;
+	padding:3px;
+	border: 1px double black;
+	background-color:rgb(120, 120, 120);
+}
+
+#button:hover
+{
+	cursor: pointer;
+}
+   
+/* ==========================================================================
+   Damage Value
+   ========================================================================== */
+   
+#calcDmg, #calcRof, #calcDps
+{
+	border: 2px solid black;
+	display:block;
+	background:rgb(120, 120, 120);
+	
+	padding:5px;
+	margin:10px;
+	margin-left:auto;
+	margin-right:auto;
+	opacity:0.8;
+	width:350px;
+	vertical-align:top;
+	
+	color:white;
+	font-size:32px;
+}
+
+
+#value
+{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+} 
+   
+/* ==========================================================================
+   Character Select
+   ========================================================================== */
+   
+#character
+{
+	font: 14px  Consolas, monaco, monospace;
+	background: url(images/wild_oliva.png) left top fixed;
+	padding: 5px;
+}
+   
+#character img 
+{
+	padding:0px 50px 10px 50px;
+	height:75px;
+	width:auto;
+} 
+
+#combo1
+{
+	width:200px;
+}
+
+#combo1 title
+{
+	border:none;
+}
+
+/* ==========================================================================
+   Additional Options
+   ========================================================================== */
+
+#options
+{
+	font-size:14px;
+}
+
+   
+   
+ /* ==========================================================================
+   Calculator Index
+   ========================================================================== */
+
+#calcMainContainer {
+	display:inline-block;
+	border-radius: 6px;
+	background: url(images/wild_oliva.png) left top fixed;
+	padding: 5px 20px 10px 20px;
+	margin-bottom: 20px;
+
+	opacity:0.9;
+	width:900px;
+	border-radius:10px;
+	border: 1px solid #702626;
+}
+
+#calcMainContainer .titleimg {
+	margin:20px 0px 40px 0px;
+}
+
+#calcMainContainer .calculatorRow {
+	width:840px;
+	margin:0 auto;
+	margin-bottom:40px;
+}
+#calcMainContainer .calculatorRow a {
+	display:inline-block;
+	width:400px;
+	height:100px;
+	margin:0px;
+	border:2px solid #702626;
+}
+#calcMainContainer .calculatorRow a:hover {
+	box-shadow: 0 0 20px #fff;	
+}
+#calcMainContainer .calculatorRow a:first-child {
+	margin-right:20px;
+}
+#calcMainContainer .calculatorRow .dmgCalc {
+
+}
+#calcMainContainer .calculatorRow .devilCalc {
+
+}
+#calcMainContainer .calculatorRow .tearsCalc {
+	opacity:0.4;
+}
+#calcMainContainer .calculatorRow .somethingCalc {
+	opacity:0.4;
+}
+#calcMainContainer h2 {
+	font-size:24px;
+	font-family:Monaco, Menlo, Consolas, "Courier New", monospace;
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+   

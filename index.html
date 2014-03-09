@@ -1,0 +1,361 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<title>DPS Calculator | Isaac Cheat Sheet</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="calc.css" type="text/css"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+
+<link rel="stylesheet" type="text/css" href="../content/dd.css">
+<script src="../content/jquery.dd.min.js"></script>
+</head>
+
+<body>
+<div id="topThing">This is totally ripped off from Eluc's awesome damage calculator at <a href="http://www.platinumgod.co.uk/calculator/">http://www.platinumgod.co.uk/calculator/</a>, I just extended it with rate of fire and DPS calculations. </div>
+<div id="items">
+
+    <div id="calcDmg">Tear Damage: <div id="valueDmg">3.50</div></div>
+    <div id="calcRof">Tears per second: <div id="valueRof">3.00</div></div>
+    <div id="calcDps">Damage per second: <div id="valueDps">10.50</div></div>
+	
+    <hr size="2" width="100%" style="color:white" align="left"/>
+    
+    <h3>Items:</h3>
+    <span><li id="button">max<img id="max" onclick="updateTotal('max', true)" src="../content/images/Items/4_maxs_head.png" /></li></span>
+    <span><li id="button">martyr<img id="martyr" onclick="updateTotal('martyr', true)" src="../content/images/Items/7_blood_of_the_martyr.png" /></li></span>
+    <span><li id="button">mushroom<img id="mushroom" onclick="updateTotal('mushroom', true)" src="../content/images/Items/12_magic_mushroom.png" /></li></span>
+    <span><li id="button">belial<img id="belial" onclick="updateTotal('belial', true)" src="../content/images/Items/34_the_book_of_belial.png" /></li></span>
+    <span><li id="button">steven<img id="steven" onclick="updateTotal('steven', true)" src="../content/images/Items/50_steven.png" /></li></span>
+    <span><li id="button">pentagram<img id="pentagram" onclick="updateTotal('pentagram', true)" src="../content/images/Items/51_pentagram.png" /></li></span>
+    <span><li id="button">hormones<img id="hormones" onclick="updateTotal('hormones', true)" src="../content/images/Items/70_growth_hormones.png" /></li></span>
+    <span><li id="button">mark<img id="mark" onclick="updateTotal('mark', true)" src="../content/images/Items/79_the_mark.png" /></li></span>
+    <span><li id="button">pact<img id="pact" onclick="updateTotal('pact', true)" src="../content/images/Items/80_the_pact.png" /></li></span>
+    <span><li id="button">nail<img id="nail" onclick="updateTotal('nail', true)" src="../content/images/Items/83_the_nail.png" /></li></span>
+    <span><li id="button">rock<img id="rock" onclick="updateTotal('rock', true)" src="../content/images/Items/90_the_small_rock.png" /></li></span>
+    <span><li id="button">halo<img id="halo" onclick="updateTotal('halo', true)" src="../content/images/Items/101_the_halo.png" /></li></span>
+    <span><li id="button">money<img id="money" onclick="updateTotal('money', true)" src="../content/images/Items/109_money_equals_power.png" /></li></span>
+    <span><li id="button">thin<img id="thin" onclick="updateTotal('thin', true)" src="../content/images/Items/120_odd_mushroom_thin.png" /></li></span>
+    <span><li id="button">thick<img id="thick" onclick="updateTotal('thick', true)" src="../content/images/Items/121_odd_mushroom_thick.png" /></li></span>
+    <span><li id="button">whore<img id="whore" onclick="updateTotal('whore', true)" src="../content/images/Items/122_whore_of_babylon.png" /></li></span>
+    <span><li id="button">razor<img id="razor" onclick="updateTotal('razor', true)" src="../content/images/Items/126_razor_blade.png" /></li></span>
+    <span><li id="button">coal<img id="coal" onclick="updateTotal('coal', true)" src="../content/images/Items/132_a_lump_of_coal.png" /></li></span>
+    <span><li id="button">stigmata<img id="stigmata" onclick="updateTotal('stigmata', true)" src="../content/images/Items/138_stigmata.png" /></li></span>
+    <span><li id="button">tech2<img id="tech2" onclick="updateTotal('tech2', true)" src="../content/images/Items/152_technology_2.png" /></li></span>
+    <span><li id="button">poly<img id="poly" onclick="updateTotal('poly', true)" src="../content/images/Items/169_polyphemus.png" /></li></span>
+    <span><li id="button">sacred<img id="sacred" onclick="updateTotal('sacred', true)" src="../content/images/Items/182_sacred_heart.png" /></li></span>
+    <span><li id="button">smb<img id="smb" onclick="updateTotal('smb', true)" src="../content/images/Items/189_smb_super_fan.png" /></li></span>
+    <span><li id="button">meat<img id="meat" onclick="updateTotal('meat', true)" src="../content/images/Items/193_meat.png" /></li></span>
+    <span><li id="button">jesus<img id="jesus" onclick="updateTotal('jesus', true)" src="../content/images/Items/197_jesus_juice.png" /></li></span>
+	
+	<span><li id="button">hanger<img id="hanger" onclick="updateTotal('hanger', true)" src="../content/images/Items/blah.png" /></li></span>
+	<span><li id="button">onion<img id="onion" onclick="updateTotal('onion', true)" src="../content/images/Items/blah.png" /></li></span>
+	<span><li id="button">squeezy<img id="squeezy" onclick="updateTotal('squeezy', true)" src="../content/images/Items/blah.png" /></li></span>
+	<span><li id="button">wiggle<img id="wiggle" onclick="updateTotal('wiggle', true)" src="../content/images/Items/blah.png" /></li></span>
+	<span><li id="button">chocolate<img id="chocolate" onclick="updateTotal('chocolate', true)" src="../content/images/Items/blah.png" /></li></span>
+	<span><li id="button">triple<img id="triple" onclick="updateTotal('triple', true)" src="../content/images/Items/blah.png" /></li></span>
+	<span><li id="button">quad<img id="quad" onclick="updateTotal('quad', true)" src="../content/images/Items/blah.png" /></li></span>
+
+
+	
+    
+    <hr size="2" width="100%" style="color:white" align="left"/>
+    
+    <h3>Tear Modifiers:</h3>
+    <span><li id="button">fetus<img id="fetus" onclick="updateTotal('fetus', true)" src="../content/images/Items/52_dr_fetus.png" /></li></span>
+    <span><li id="button">tech<img id="tech" onclick="updateTotal('tech', true)" src="../content/images/Items/68_technology.png" /></li></span>
+    <span><li id="button">knife<img id="knife" onclick="updateTotal('knife', true)" src="../content/images/Items/114_moms_knife.png" /></li></span>
+    <span><li id="button">brim<img id="brim" onclick="updateTotal('brim', true)" src="../content/images/Items/118_brimstone.png" /></li></span>
+    <span><li id="button">ipecac<img id="ipecac" onclick="updateTotal('ipecac', true)" src="../content/images/Items/149_ipecac.png" /></li></span>
+    <span><li id="button">epic<img id="epic" onclick="updateTotal('epic', true)" src="../content/images/Items/168_epic_fetus.png" /></li></span>
+    
+    
+    <hr size="2" width="100%" style="color:white" align="left"/>
+        
+    <h3>Trinkets / Cards:</h3>
+    <span><li id="button">curved<img id="curved" onclick="updateTotal('curved', true)" src="../content/images/Trinkets/35.png" /></li></span>
+	<span><li id="button">cancer<img id="cancer" onclick="updateTotal('cancer', true)" src="../content/images/Trinkets/39.png" /></li></span>
+    <span><li id="button">empress<img id="empress" onclick="updateTotal('empress', true)" src="../content/images/Cards/3.png" /></li></span>
+    <span><li id="button">devil<img id="devil" onclick="updateTotal('devil', true)" src="../content/images/Cards/15.png" /></li></span>
+    
+    <hr size="2" width="100%" style="color:white" align="left"/>
+    
+    <h3>Character:</h3>
+    <div id="character">
+    <select name="combo1" id="combo1" onchange="updateTotal()">
+        <option value="isaac" selected="selected" title="../content/images/Characters/Isaac.png">Isaac</option>
+        <option value="maggy" title="../content/images/Characters/Maggy.png">Maggy</option>
+        <option value="cain" title="../content/images/Characters/Cain.png">Cain</option>
+        <option value="judas" title="../content/images/Characters/Judas.png">Judas</option>
+        <option value="dead_baby" title="../content/images/Characters/Dead_Baby.png">???</option>
+        <option value="eve" title="../content/images/Characters/Eve.png">Eve</option>
+        <option value="samson" title="../content/images/Characters/Samson.png">Samson</option>
+    </select>
+    </div>
+    
+    <hr size="2" width="100%" style="color:white" align="left"/>
+
+	<h3>Additional options:</h3>
+
+    <form name="options" id="options">
+    <div id="option1">Total Coins (Money = Power): <input type=Text id="totalCoins" name=totalCoins size= 2 value="0" style="text-align:center" onchange="updateTotal()"> (Max = 99)</div>
+    <div id="option2">Razor Blade (Times used): <input type=Text id="totalRazor" name=totalRazor size= 2 value="0" style="text-align:center" onchange="updateTotal()"> (Unlimited)</div>
+    <div id="option3">Lump of Coal (Frames on screen): <input type=Text id="totalCoal" name=totalCoal size= 2 value="0" style="text-align:center" onchange="updateTotal()"> (Max = 150)</div>
+    </form>
+    
+    
+    <hr size="2" width="100%" style="color:white" align="left"/>
+    
+    <h3>Instructions:</h3>
+    <p id="instructions">This page acts as a damage calculator and will show you the exact damage of the player's tears as they would be in-game with certain item setups. It's quite simple to use, just click on the images to select them and choose a character and it will emulate that setup from within the game and give you the damage value.</p>
+
+</div>
+<br />
+<!-- PG Footer -->
+
+<br />
+
+</body>
+
+<script type="text/javascript">
+
+var itemValue = {
+		"max": "0",
+		"martyr": "0",
+		"mushroom": "0",
+		"belial": "0",
+		"steven": "0",
+		"pentagram": "0",
+		"hormones": "0",
+		"mark": "0",
+		"pact": "0",
+		"nail": "0",
+		"rock": "0",
+		"halo": "0",
+		"money": "0",
+		"thin": "0",
+		"thick": "0",
+		"whore": "0",
+		"razor": "0",
+		"coal": "0",
+		"stigmata": "0",
+		"tech2": "0",
+		"poly": "0",
+		"sacred": "0",
+		"smb": "0",
+		"meat": "0",
+		"jesus": "0",
+		"hanger": "0",
+		"onion": "0",
+		"squeezy": "0",
+		"wiggle": "0",
+		"chocolate": "0",
+		"triple": "0",
+		"quad": "0",
+				
+		"curved": "0",
+		"cancer": "0",
+		"empress": "0",
+		"devil": "0",
+		
+		"fetus": "0",
+		"tech": "0",
+		"knife": "0",
+		"brim": "0",
+		"ipecac": "0",
+		"epic": "0"
+}
+
+function updateTotal(img, bool) 
+{
+	if (bool == true)
+	{
+		var property = document.getElementById(img);
+		if (window.getComputedStyle(property).backgroundColor !== 'rgb(120, 120, 120)') 
+		{
+			property.style.backgroundColor = "rgb(120, 120, 120)";
+		}
+		else 
+		{
+			property.style.backgroundColor = "rgb(50, 200, 50)";
+		}
+	}
+
+	var items = itemValue;
+	
+	if (items[img] == 0)
+	{
+		items[img] = 1;
+	}
+	else
+	{
+		items[img] = 0;
+	}
+
+	var v2 = 0;
+	var coins = document.getElementById('totalCoins').value;
+	var razor = document.getElementById('totalRazor').value;
+	var coal = document.getElementById('totalCoal').value;
+	
+	if (items['belial'] == 1)
+	{
+		v2 += 2;
+	}
+	else if (items['devil'] == 1) 
+	{
+		v2 += 2;
+	}
+	
+	if (items['martyr'] == 1) v2++;
+	if (items['rock'] == 1) v2++;
+	
+	
+	if (items['money'] == 1)
+	{
+		v2 += Math.min(coins,99) * 0.04; 
+		$("#option1").css({"opacity": "1"}); 
+	}
+	else
+	{
+		$("#option1").css({"opacity": "0.2"}); 
+	}
+	
+	if (items['empress'] == 1)
+	{
+		v2 += 3.375;
+	}
+	else if (items['whore'] == 1) 
+	{
+		v2 += 1.5;
+	}
+	
+	if (items['steven'] == 1) v2++;
+	if (items['pentagram'] == 1) v2++;
+	if (items['hormones'] == 1) v2++;
+	if (items['mark'] == 1) v2++;
+	
+	if (items['pact'] == 1) v2 += 0.5;
+	if (items['max'] == 1) v2 += 0.5;
+	if (items['jesus'] == 1) v2 += 0.5;
+	
+	if (items['mushroom'] == 1)  v2 += 0.3;
+	if (items['halo'] == 1) v2 += 0.3;
+	if (items['thick'] == 1) v2 += 0.3;
+	if (items['stigmata'] == 1) v2 += 0.3;
+	if (items['smb'] == 1) v2 += 0.3;
+	if (items['meat'] == 1) v2 += 0.3;
+	
+	if (items['thin'] == 1)
+	{
+		v2 *= 0.9;
+        v2 -= 0.4;
+	}
+	
+	if (items['nail'] == 1) v2 += 0.7;
+	
+	
+	if (items['razor'] == 1)
+	{
+		v2 += (razor * 2) * 0.6;
+		$("#option2").css({"opacity": "1"}); 
+	}
+	else
+	{
+		$("#option2").css({"opacity": "0.2"}); 
+	}
+	
+	v2 = 3.5 * Math.sqrt(1 + v2 * 1.2);
+	
+	if (items['poly'] == 1)
+	{
+		v2 += 4;
+        v2 *= 2;
+	}
+	
+	var v3 = 0;
+	if ($("#combo1").val() == "cain") v3 = 0.2;
+	if ($("#combo1").val() == "judas") v3 = 0.35;
+	if ($("#combo1").val() == "dead_baby") v3 = 0.05;
+	if ($("#combo1").val() == "eve") v3 = -0.25;
+	
+	v2 *= 1 + v3;
+	
+	if (items['curved'] == 1) v2 += 2;
+	
+	if (items['sacred'] == 1)
+	{
+		v2 *= 2.3;
+        v2++;
+	}
+	
+	if (items['tech2'] == 1) v2 *= 0.65;
+	
+	if (items['max'] == 1 || 
+	    items['belial'] == 1 && items['martyr'] == 1 || 
+		items['devil'] == 1 && items['martyr'] == 1 ||
+		items['mushroom'] == 1)
+		v2 *= 1.5;
+		
+	if (items['coal'] == 1) 
+	{
+		v2 += Math.min(coal,150) * 0.14;
+		$("#option3").css({"opacity": "1"}); 
+	}
+	else
+	{
+		$("#option3").css({"opacity": "0.2"});  
+	}
+	
+	v2 = v2.toFixed(2);
+	
+	document.getElementById('valueDmg').innerHTML = v2;
+	
+	
+	var delayMod = 0;
+	
+	if (items['numberone']) delayMod += 1.5;
+	
+	if(items['hanger'] === 1) delayMod += 0.7;
+	if(items['pact'] === 1) delayMod += 0.7;
+	if(items['onion'] === 1) delayMod += 0.7;
+	if(items['thin'] === 1) delayMod += 1.7;
+	if(items['squeezy'] === 1) delayMod += 0.4;
+	if(items['wiggle'] === 1) delayMod += 0.4;
+	if(items['sacred'] === 1) delayMod -= 0.4;
+	if(items['halo'] === 1) delayMod += 0.2;
+	if(items['rock'] === 1) delayMod += 0.2;
+	if(items['smb'] === 1) delayMod += 0.2;
+	if($("#combo1").val() == "samson") delayMod -= 0.25;
+	
+	var delay;
+	if(delayMod >= 0)
+	   delay = 16 - Math.sqrt(1 + delayMod * 1.3) * 6;
+	else 
+	   delay = 16 - delayMod * 6;
+	   
+	if(items['chocolate'] === 1) delay *= 0.8;
+	if(items['triple'] === 1 ||
+	   items['quad'] === 1 ||
+	   items['poly'] === 1 || 
+	   items['ipecac'] === 1 ) delay = delay * 2.1 + 3;
+	if(items['cancer'] === 1) delay -= 2;
+	
+	var rof = 30 / delay;	
+	var dps = rof * v2;
+	if(items['quad'] === 1) 
+	   dps *= 4;
+	else if (items['triple'] === 1)
+	   dps *= 3;
+	
+	document.getElementById('valueRof').innerHTML = rof.toFixed(2);
+	document.getElementById('valueDps').innerHTML = dps.toFixed(2);
+	
+		
+}
+</script>
+
+
+</html>
